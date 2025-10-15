@@ -43,6 +43,8 @@ NUMBER_OF_NUMBERS = 2
 NUMBER_OF_DIGITS = 2
 DELAY = 2 
 RESET_DELAY = 5 #to reset the expression there is an higher delay
+RESET_VALUE = 5
+THRESHOLD = 10
 
 #functions
 def draw_text(img, text,
@@ -65,7 +67,7 @@ def draw_text(img, text,
     cv2.putText(image_new, text, (x , y + text_h + font_scale - 1), font, font_scale, text_color, font_thickness, lineType)
 
     return image_new
-def are_points_almost_equal(p1: list, p2: list, abs_tol=10) -> bool:
+def are_points_almost_equal(p1: list, p2: list, abs_tol=THRESHOLD) -> bool:
     if len(p1) != len(p2): # ensure same dimensions
         return False
     for i in range(len(p1)):
@@ -156,7 +158,7 @@ while cap.isOpened():
                     cv2.circle(frame, (cx, last_point_cy), 8, (0, 0, 255), -1)
                     
             # reset 
-            if 5 in digits and total:
+            if RESET_VALUE in digits and total:
                 current_time = time.time()
                 if current_time - last_command_time > RESET_DELAY: 
                     total = main_index = prev_digit = 0
