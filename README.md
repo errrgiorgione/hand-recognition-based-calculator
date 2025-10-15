@@ -6,7 +6,7 @@ This repository contains a single-file Python hand-based calculator made with `c
 
 ## Numbers and operations
 
-The script allows a maximum of two hands simultaneously, meaning any other hand won't be taken into account.
+The script allows a maximum of two hands simultaneosly, meaning any other hand won't be taken into account.
 You can show either one hand or both hands and the script will understand the number you are showing based on your fingers' position. The hand is supposed to stay with the **palm of hand facing the camera**, the **thumb finger pointing one of the sides** and the **other fingers pointing upwards**.
 
 The following image shows how the hand is seen by the script and it is essential to understand how the script counts the fingers.
