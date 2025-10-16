@@ -92,7 +92,7 @@ while cap.isOpened():
     if results.multi_hand_landmarks and results.multi_handedness:
         skip_cycle = False
         prev_digit = digits[single_number_index]
-        digits = [digits[i] if single_number_index > i else 0 for i in range(len(digits))]
+        digits = [digits[i] if single_number_index > i or is_number_done else 0 for i in range(len(digits))]
         for hand_landmarks, handedness in zip(results.multi_hand_landmarks, results.multi_handedness):
             label = handedness.classification[0].label # left or right hand
             mp_drawing.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
