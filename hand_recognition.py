@@ -37,7 +37,7 @@ INSTRUCTIONS_MAP = {
     0: "Insert {numberN} number's {digitN} digit",
     1: "Insert operation",
     2: "Confirm expression",
-    3: ''
+    3: "Show an open hand to reset"
 }
 NUMBER_OF_NUMBERS = 2
 NUMBER_OF_DIGITS = 2
