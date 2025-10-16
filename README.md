@@ -9,8 +9,8 @@ This repository contains a single-file Python hand-based calculator made with `c
 To download and use this script you can download the entire repository using `git clone` and download all the required modules using `pip` (`cv2` and `mediapipe` module).
 
 ```
-git clone https://github.com/errrgiorgione/hand-recognition-based-tool
-cd hand-recognition-based-tool
+git clone https://github.com/errrgiorgione/hand-recognition-based-calculator
+cd hand-recognition-based-calculator
 pip install -r requirements.txt
 ```
 
