@@ -23,6 +23,10 @@ python hand_recognition.py
 > [!NOTE]
 > The script was tested on a Windows 11 computer using Python 3.10.0 and using the modules' version indicated in the [requirement](https://github.com/errrgiorgione/hand-recognition-based-calculator/blob/main/requirements.txt) file.
 
+> [!IMPORTANT]
+> At the time of the writing of this file, the `mediapipe` module only supports the 64-bit version of Python 3.7 to 3.10, as specified on this [mediapipe.readthedocs.io](https://mediapipe.readthedocs.io/en/latest/getting_started/troubleshooting.html#:~:text=after%20running%20pip%20install%20mediapipe,x86_64%20macOS%2010.15%2B), meaning that
+> any other Python version (`3.14` is the lastet version at the writing of this file) will not be able to run this script.
+
 ## Numbers and operations
 
 The script allows a maximum of two hands simultaneously, meaning any other hand won't be taken into account.
