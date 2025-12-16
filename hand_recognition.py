@@ -84,6 +84,7 @@ instructions = INSTRUCTIONS_MAP[0].format(digitN=1, numberN=1)
 
 while cap.isOpened():
     ret, frame = cap.read()
+    frame = cv2.flip(frame, 1) #flips on x axis
     if not ret:
         continue
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -174,6 +175,7 @@ while cap.isOpened():
             number = ''
             for digit in digits: number += str(digit)
         if x > 0: expression += f"{operation[x-1]} " if operation[x-1] else ''
+        number = int(number) if number else number #removes leading zeros
         expression += f"{number} "
     if main_index == NUMBER_OF_NUMBERS and numbers[NUMBER_OF_NUMBERS-1]: 
         total = eval(expression)
